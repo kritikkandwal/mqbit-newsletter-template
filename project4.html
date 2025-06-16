@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MQBIT Travel Technology Newsletter</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%);
+            font-family: 'Poppins', Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .email-container {
+            max-width: 700px;
+            margin: 0 auto;
+            box-shadow: 0 15px 50px rgba(0, 32, 87, 0.15);
+            border-radius: 16px;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .header {
+            padding: 30px 0 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            animation: gradientShift 3s infinite alternate;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 36px;
+            font-weight: 800;
+            color: white;
+            letter-spacing: 1px;
+            margin: 10px 0 5px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .tagline {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 18px;
+            margin: 0;
+            font-weight: 300;
+            position: relative;
+            display: inline-block;
+            padding: 0 15px;
+        }
+
+        .tagline:after,
+        .tagline:before {
+            content: "✈";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.7;
+        }
+
+        .tagline:before {
+            left: -10px;
+        }
+
+        .tagline:after {
+            right: -10px;
+        }
+
+        .content-block {
+            padding: 30px 40px;
+            background: #fff;
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #030303;
+            margin: -13px 10px 8px;
+            position: relative;
+            text-align: center;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+
+            border-radius: 3px;
+        }
+
+        .intro-text {
+            font-size: 17px;
+            line-height: 1.7;
+            color: #555;
+            /* text-align: center; */
+            margin: 0 auto 12px;
+            max-width: 600px;
+            background: #f9fbff;
+            /* padding: 20px; */
+            border-radius: 12px;
+
+        }
+
+        .offer-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f9fbff 100%);
+            border-radius: 16px;
+            padding: 25px;
+            border: 1px solid #e6f0ff;
+            /* box-shadow: 0 8px 25px rgba(0, 97, 255, 0.08); */
+            /* transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .offer-card:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+
+        }
+
+        /* .offer-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 35px rgba(0, 97, 255, 0.2);
+        } */
+
+        .offer-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #0040b5;
+            margin: 0 0 18px;
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+        }
+
+        .offer-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            background: linear-gradient(135deg, #0061ff 0%, #00c6ff 100%);
+            color: white;
+            font-size: 20px;
+            box-shadow: 0 5px 15px rgba(0, 97, 255, 0.3);
+        }
+
+        .feature-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .feature-list li {
+            padding: 13px 0;
+            align-items: flex-start;
+            transition: all 0.3s ease;
+        }
+
+        .feature-list li:hover {
+            background: rgba(0, 97, 255, 0.03);
+            padding-left: 10px;
+            border-color: #c2d8ff;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-icon {
+            color: #007BFF;
+            font-size: 18px;
+            margin-right: 12px;
+            min-width: 24px;
+            padding-top: 4px;
+        }
+
+        .feature-text {
+            flex: 1;
+            font-size: 15px;
+            color: #555;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            background: #f9fbff;
+            margin: 5px 2px 14px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 97, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        /* .benefit-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 8px 20px rgba(0, 97, 255, 0.1);
+        } */
+
+        .benefit-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #00CFFF 0%, #007BFF 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: white;
+            font-size: 22px;
+        }
+
+        .benefit-text {
+            font-weight: 500;
+            color: #071125;
+        }
+
+        .cta-container {
+            text-align: center;
+            padding: 30px 0 20px;
+            /* background: linear-gradient(135deg, #fefefe 0%, #eef5ff 100%); */
+            border-radius: 16px;
+            margin: 40px 0;
+            /* border: 1px solid #e6f0ff; */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-container:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            /* background: linear-gradient(90deg, #0061ff, #00c6ff, #0061ff); */
+            animation: gradientShift 3s infinite linear;
+        }
+
+        .cta-text {
+            font-size: 20px;
+            color: #030404;
+            margin-bottom: 25px;
+            font-weight: 500;
+            max-width: 600px;
+            margin: 0 auto 25px;
+            padding: 0 20px;
+        }
+
+        .cta-highlight {
+            color: #030404;
+            font-weight: 600;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #007BFF 0%, #00CFFF 100%);
+            color: white !important;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 16px 45px;
+            border-radius: 50px;
+            box-shadow: 0 10px 25px #84bffe;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .cta-button:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: 0.5s;
+            z-index: -1;
+        }
+
+        .cta-button:hover:before {
+            left: 100%;
+        }
+
+        .website-link {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .website-link a {
+            color: #0061ff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+
+        }
+
+        .website-link a:hover {
+            color: #00CFFF;
+
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #10357e 0%, #0f3f8d 100%);
+            padding: 30px 40px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+        }
+
+        .footer:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .social-icons {
+            text-align: center;
+            margin: 25px 0 30px;
+        }
+
+        .social-icon {
+            display: inline-flex;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            margin: 0 10px;
+            color: white;
+            font-size: 18px;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-icon:hover {
+            /* padding-top: 30px; */
+            background: #0061ff;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(22, 95, 214, 0.4);
+        }
+
+        .contact-info {
+            text-align: center;
+            margin: 25px 0;
+            line-height: 1.8;
+        }
+
+        .contact-info p {
+            margin: 8px 0;
+        }
+
+        .unsubscribe {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.6);
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .unsubscribe a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            margin: 0 8px;
+            transition: all 0.3s ease;
+        }
+
+        .unsubscribe a:hover {
+            color: #00CFFF;
+            text-decoration: underline;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 15px;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body style="margin: 0; padding: 0; background-color: #f4f4f4;">
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#f4f4f4">
+        <tr>
+            <td align="center" style="padding: 30px 0;">
+                <!-- Main Wrapper -->
+                <table class="wrapper" width="700" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff">
+                    <!-- MQBIT Logo Section -->
+                    <tr>
+                        <td align="center" style="padding: 20px 0 10px;">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNg2ERG0mqa0nG6IwxyyQhRINov-kf2-NFQ&amp;s"
+                                alt="MQBIT Logo" style="display: block; max-width: 142px;border-radius: 12px;">
+                        </td>
+                    </tr>
+
+
+                    <!-- Banner Section -->
+                    <tr>
+                        <td align="center">
+                            <img src="https://i.ibb.co/nNTnYXSM/19836515-6134974.png" alt="Travel Tech Banner"
+                                width="700" style="display:block; max-width:100%;">
+                        </td>
+                    </tr>
+
+
+                    <!-- Main Content -->
+                    <tr>
+                        <td class="content-block" align="left">
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                    <td>
+                                        <h2 class="section-title" style="text-align: left;">
+                                            Elevate Your Travel Business with MQBIT Travel Solutions
+                                        </h2>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="intro-text">
+                                            At MQBIT Technologies, we specialize in building smart,
+                                            scalable, and secure travel solutions tailored for B2B & B2C
+                                            businesses. Our cutting-edge technology empowers travel
+                                            agencies to thrive in the digital landscape.
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left">
+                                        <h3 class="section-title"
+                                            style="padding: 0 0 5px; margin: 10px; text-align: left;">
+                                            <span></span> We Offer
+                                        </h3>
+                                    </td>
+                                </tr>
+
+
+                                <!-- Offers Grid -->
+                                <tr>
+                                    <td>
+                                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                            <tr>
+                                                <td width="50%" valign="top" style="padding: 10px;">
+                                                    <table class="offer-card" width="100%" cellpadding="0"
+                                                        cellspacing="0" border="0">
+                                                        <tr>
+                                                            <td>
+                                                                <table cellpadding="0" cellspacing="0" border="0">
+                                                                    <tr>
+                                                                        <td>
+                                                                            <table cellpadding="0" cellspacing="0"
+                                                                                border="0">
+                                                                                <tr>
+                                                                                    <!-- ICON BOX -->
+                                                                                    <td width="40" align="center"
+                                                                                        valign="top"
+                                                                                        style="padding-top: 6px;">
+                                                                                        <table width="40" height="40"
+                                                                                            cellpadding="0"
+                                                                                            cellspacing="0"
+                                                                                            class="benefit-icon">
+                                                                                            <tr>
+                                                                                                <td align="center"
+                                                                                                    valign="middle">
+                                                                                                    <i class="fas fa-plane"
+                                                                                                        style="color: white; font-size: 16px;"></i>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                    </td>
+
+                                                                                    <!-- TEXT BLOCK -->
+                                                                                    <td style="padding-left: 12px;"
+                                                                                        valign="top">
+                                                                                        <h4 class="offer-title"
+                                                                                            style="    margin: -6px -9px 2px; font-size: 16px; color: #003087; font-weight: 700;">
+                                                                                            B2B & B2C
+                                                                                            Travel
+                                                                                            Portals
+                                                                                        </h4>
+                                                                                        <p
+                                                                                            style="margin: 6px 0 0; font-size: 14px; color: #666; line-height: 1.5;">
+                                                                                            Custom
+                                                                                            flight,
+                                                                                            hotel,
+                                                                                            activity &
+                                                                                            package
+                                                                                            booking
+                                                                                            platforms
+                                                                                        </p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+
+
+
+
+                                                    </table>
+                                                </td>
+                                                <td width="50%" valign="top" style="padding: 10px;">
+                                                    <table class="offer-card" width="100%" cellpadding="0"
+                                                        cellspacing="0" border="0">
+                                                        <tr>
+                                                            <td>
+                                                                <table cellpadding="0" cellspacing="0" border="0">
+                                                                    <tr>
+                                                                        <td>
+                                                                            <table cellpadding="0" cellspacing="0"
+                                                                                border="0">
+                                                                                <tr>
+                                                                                    <td width="40" align="center"
+                                                                                        valign="top"
+                                                                                        style="padding-top: 6px;">
+                                                                                        <table width="40" height="40"
+                                                                                            cellpadding="0"
+                                                                                            cellspacing="0"
+                                                                                            class="benefit-icon">
+                                                                                            <tr>
+                                                                                                <td align="center"
+                                                                                                    valign="middle">
+                                                                                                    <i class="fas fa-plug"
+                                                                                                        style="color: white; font-size: 16px;"></i>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                    </td>
+
+                                                                                    <td style="padding-left: 12px;"
+                                                                                        valign="top">
+                                                                                        <h4 class="offer-title"
+                                                                                            style="    margin: -6px -9px 2px; font-size: 16px; color: #003087; font-weight: 700;">
+                                                                                            API
+                                                                                            Integration
+                                                                                            &
+                                                                                            Connectivity
+                                                                                        </h4>
+                                                                                        <p
+                                                                                            style="margin: 6px 0 0; font-size: 14px; color: #666; line-height: 1.5;">
+                                                                                            Connect with
+                                                                                            top flight &
+                                                                                            hotel
+                                                                                            providers
+                                                                                            (Amadeus,
+                                                                                            TBO, etc.)
+                                                                                        </p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="50%" valign="top" style="padding: 10px;">
+                                                    <table class="offer-card" width="100%" cellpadding="0"
+                                                        cellspacing="0" border="0">
+                                                        <tr>
+                                                            <td>
+                                                                <table cellpadding="0" cellspacing="0" border="0">
+                                                                    <tr>
+                                                                        <td>
+                                                                            <table cellpadding="0" cellspacing="0"
+                                                                                border="0">
+                                                                                <tr>
+                                                                                    <td width="40" align="center"
+                                                                                        valign="top"
+                                                                                        style="padding-top: 6px;">
+                                                                                        <table width="40" height="40"
+                                                                                            cellpadding="0"
+                                                                                            cellspacing="0"
+                                                                                            class="benefit-icon">
+                                                                                            <tr>
+                                                                                                <td align="center"
+                                                                                                    valign="middle">
+                                                                                                    <i class="fas fa-users"
+                                                                                                        style="color: white; font-size: 16px;"></i>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                    </td>
+
+                                                                                    <td style="padding-left: 12px;"
+                                                                                        valign="top">
+                                                                                        <h4 class="offer-title"
+                                                                                            style="    margin: -6px -9px 2px; font-size: 16px; color: #003087; font-weight: 700;">
+                                                                                            Agent
+                                                                                            Management
+                                                                                            System
+                                                                                        </h4>
+                                                                                        <p
+                                                                                            style="margin: 6px 0 0; font-size: 14px; color: #666; line-height: 1.5;">
+                                                                                            Manage
+                                                                                            agents,
+                                                                                            credits,
+                                                                                            commissions
+                                                                                            & ledgers
+                                                                                            easily
+                                                                                        </p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+
+                                                    </table>
+                                                </td>
+                                                <td width="50%" valign="top" style="padding: 10px;">
+                                                    <table class="offer-card" width="100%" cellpadding="0"
+                                                        cellspacing="0" border="0">
+                                                        <tr>
+                                                            <td>
+                                                                <table cellpadding="0" cellspacing="0" border="0">
+                                                                    <tr>
+                                                                        <td>
+                                                                            <table cellpadding="0" cellspacing="0"
+                                                                                border="0">
+                                                                                <tr>
+                                                                                    <td width="40" align="center"
+                                                                                        valign="top"
+                                                                                        style="padding-top: 6px;">
+                                                                                        <table width="40" height="40"
+                                                                                            cellpadding="0"
+                                                                                            cellspacing="0"
+                                                                                            class="benefit-icon">
+                                                                                            <tr>
+                                                                                                <td align="center"
+                                                                                                    valign="middle">
+                                                                                                    <i class="fas fa-mobile-alt"
+                                                                                                        style="color: white; font-size: 16px;"></i>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                    </td>
+
+                                                                                    <td style="padding-left: 12px;"
+                                                                                        valign="top">
+                                                                                        <h4 class="offer-title"
+                                                                                            style="    margin: -6px -9px 2px; font-size: 16px; color: #003087; font-weight: 700;">
+                                                                                            Mobile-Responsive
+                                                                                            Design
+                                                                                        </h4>
+                                                                                        <p
+                                                                                            style="margin: 6px 0 0; font-size: 14px; color: #666; line-height: 1.5;">
+                                                                                            Fully
+                                                                                            responsive
+                                                                                            portals for
+                                                                                            smooth
+                                                                                            mobile & web
+                                                                                            access
+                                                                                        </p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="50%" valign="top" style="padding: 10px;">
+                                                    <table class="offer-card" width="100%" cellpadding="0"
+                                                        cellspacing="0" border="0">
+                                                        <tr>
+                                                            <td>
+                                                                <table cellpadding="0" cellspacing="0" border="0">
+                                                                    <tr>
+                                                                        <td>
+                                                                            <table cellpadding="0" cellspacing="0"
+                                                                                border="0">
+                                                                                <tr>
+                                                                                    <!-- ICON BOX using class -->
+                                                                                    <td width="40" align="center"
+                                                                                        valign="top"
+                                                                                        style="padding-top: 6px;">
+                                                                                        <table width="40" height="40"
+                                                                                            cellpadding="0"
+                                                                                            cellspacing="0"
+                                                                                            class="benefit-icon">
+                                                                                            <tr>
+                                                                                                <td align="center"
+                                                                                                    valign="middle">
+                                                                                                    <i class="fas fa-chart-bar"
+                                                                                                        style="color: white; font-size: 16px;"></i>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                    </td>
+
+                                                                                    <!-- TEXT BLOCK -->
+                                                                                    <td style="padding-left: 12px;"
+                                                                                        valign="top">
+                                                                                        <h4 class="offer-title"
+                                                                                            style="    margin: -6px -9px 2px; font-size: 16px; color: #003087; font-weight: 700;">
+                                                                                            Custom CRM
+                                                                                            for Travel
+                                                                                        </h4>
+                                                                                        <p
+                                                                                            style="margin: 6px 0 0; font-size: 14px; color: #666; line-height: 1.5;">
+                                                                                            Handle
+                                                                                            leads,
+                                                                                            bookings,
+                                                                                            payments,
+                                                                                            and
+                                                                                            documentation—all
+                                                                                            in one
+                                                                                            place.
+                                                                                        </p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+
+                                                    </table>
+                                                </td>
+
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td align="left" style=""> <!-- Top: 40px, Bottom: 30px -->
+                                        <h3 class="section-title"
+                                            style="font-family: Arial, sans-serif; font-size: 24px; color: #000000; margin: 10px; text-align: left;">
+                                            Why Choose MQBIT?
+                                        </h3>
+                                        <table width="100%" cellpadding="0" cellspacing="0" border="0"
+                                            style="margin-top: -2px;">
+                                            <tr>
+                                                <td align="left">
+
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+
+
+
+
+                                <!-- Benefits Grid -->
+                                <tr>
+                                    <td>
+                                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                            <tr>
+                                                <td width="50%" valign="top" style="padding: 10px;">
+                                                    <table class="benefit-item" width="100%" cellpadding="0"
+                                                        cellspacing="0" border="0">
+                                                        <tr>
+                                                            <td width="50" valign="middle" class="benefit-icon">
+                                                                <i class="fas fa-bolt"></i>
+                                                            </td>
+                                                            <td valign="middle" class="benefit-text">
+                                                                Fast & Secure API Architecture
+                                                            </td>
+                                                        </tr>
+
+                                                    </table>
+                                                </td>
+                                                <td width="50%" valign="top" style="padding: 10px;">
+                                                    <table class="benefit-item" width="100%" cellpadding="0"
+                                                        cellspacing="0" border="0">
+                                                        <tr>
+                                                            <td width="50" valign="middle" class="benefit-icon">
+                                                                <i class="fas fa-palette"></i>
+                                                            </td>
+                                                            <td valign="middle" class="benefit-text">
+                                                                White-labeled Portal with Admin Controls
+                                                            </td>
+                                                        </tr>
+
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="50%" valign="top" style="padding: 10px;">
+                                                    <table class="benefit-item" width="100%" cellpadding="0"
+                                                        cellspacing="0" border="0">
+                                                        <tr>
+                                                            <td width="50" valign="middle" class="benefit-icon">
+                                                                <i class="fas fa-cloud"></i>
+                                                            </td>
+                                                            <td valign="middle" class="benefit-text">
+                                                                Cloud Hosted & Scalable Infrastructure
+                                                            </td>
+                                                        </tr>
+
+                                                    </table>
+                                                </td>
+                                                <td width="50%" valign="top" style="padding: 10px;">
+                                                    <table class="benefit-item" width="100%" cellpadding="0"
+                                                        cellspacing="0" border="0">
+                                                        <tr>
+                                                            <td width="50" valign="middle" class="benefit-icon">
+                                                                <i class="fas fa-shield-alt"></i>
+                                                            </td>
+                                                            <td valign="middle" class="benefit-text">
+                                                                24x7 Tech Support & Maintenance
+
+                                                            </td>
+                                                        </tr>
+
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                <!-- CTA Section -->
+                                <tr>
+                                    <td class="cta-container" style="padding: 0;">
+                                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                            <tr>
+                                                <td align="left" style=""> <!-- Top: 40px, Bottom: 30px -->
+                                                    <h3 class="section-title"
+                                                        style="font-family: Arial, sans-serif; font-size: 23px; color: #000000; margin: 10px; text-align: left;">
+                                                        Built for travel agencies, OTAs, DMCs & aggregators.
+                                                        Let's grow your digital presence together.
+                                                    </h3>
+                                                    <table width="100%" cellpadding="0" cellspacing="0" border="0"
+                                                        style="margin-top: -2px;">
+                                                        <tr>
+                                                            <td align="left">
+
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+
+                                            <!-- Keep button and link centered -->
+                                            <tr>
+                                                <td align="center" style="padding: 20px 0;">
+                                                    <a href="http://www.mqbittechnologies.com" target="_blank"
+                                                        class="cta-button">
+                                                        <i class="fas fa-calendar-check"></i> Schedule a Demo Today
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center">
+                                                    <p class="website-link" style="margin: 0;">
+                                                        Or visit:
+                                                        <a href="http://www.mqbittechnologies.com" target="_blank">
+                                                            www.mqbittechnologies.com
+                                                        </a>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+
+
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td class="footer" align="center">
+                            <table width="90%" cellpadding="0" cellspacing="0" border="0">
+                                <!-- Social Icons -->
+                                <tr>
+                                    <td align="center" style="padding: 20px 0;">
+                                        <a href="https://api.whatsapp.com/send?phone=+919625900439&text=Hello..."
+                                            target="_blank"
+                                            style="display:inline-block; text-decoration:none; margin-right:10px;">
+                                            <img src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="WhatsApp"
+                                                width="36" style="border-radius:50%;">
+                                        </a>
+
+                                        <a href="https://www.linkedin.com/company/mqbit-technologies" target="_blank"
+                                            style="display:inline-block; text-decoration:none; margin-right:10px;">
+                                            <img src="https://img.icons8.com/color/48/linkedin-circled--v1.png"
+                                                alt="LinkedIn" width="36" style="border-radius:50%;">
+                                        </a>
+
+                                        <a href="https://x.com/Mqbittechnology" target="_blank"
+                                            style="display:inline-block; text-decoration:none; margin-right:10px;">
+                                            <img src="https://img.icons8.com/color/48/twitterx--v1.png" alt="X"
+                                                width="36" style="border-radius:50%;">
+                                        </a>
+
+                                        <a href="https://www.instagram.com/mqbittechnologies" target="_blank"
+                                            style="display:inline-block; text-decoration:none;">
+                                            <img src="https://img.icons8.com/color/48/instagram-new--v1.png"
+                                                alt="Instagram" width="36" style="border-radius:50%;">
+                                        </a>
+                                    </td>
+
+
+
+
+                                </tr>
+
+                                <!-- Contact Info -->
+                                <tr>
+                                    <td class="contact-info">
+                                        <p style="margin: 5px 0;">E518 First Floor Kochhar Plaza,sector
+                                            7 Dwarka 110075
+                                            near<br> Ramphal Chowk Delhi India</p>
+                                        <p style="margin: 5px 0;">Email: info@mqbittech.com | Phone: +91
+                                            966 776 6204 +91 859 566 7708
+                                        </p>
+                                    </td>
+                                </tr>
+
+                                <!-- Unsubscribe -->
+                                <tr>
+                                    <td class="unsubscribe">
+                                        <p>You received this email because you signed up on our
+                                            website.<br>
+                                            <a href="#">Unsubscribe</a>
+                                        </p>
+                                        <p>&copy; © 2025 MQBIT Technologies. All rights reserved.</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    </table>
+    </td>
+    </tr>
+    </table>
+</body>
+
+</html>
